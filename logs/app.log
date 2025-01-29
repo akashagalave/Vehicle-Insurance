@@ -1,0 +1,14 @@
+2025-01-30 00:16:12,221 - INFO - This is an info log.
+2025-01-30 00:16:12,221 - ERROR - This is an error log.
+2025-01-30 00:16:12,221 - INFO - This is an info message.
+2025-01-30 00:16:12,222 - WARNING - This is a warning message.
+2025-01-30 00:16:12,222 - ERROR - This is an error message.
+2025-01-30 00:16:12,222 - CRITICAL - This is a critical message.
+2025-01-30 00:19:06,589 - INFO - This is an info log.
+2025-01-30 00:19:06,589 - ERROR - This is an error log.
+2025-01-30 00:19:06,590 - INFO - This is an info message.
+2025-01-30 00:19:06,590 - WARNING - This is a warning message.
+2025-01-30 00:19:06,590 - ERROR - This is an error message.
+2025-01-30 00:19:06,590 - CRITICAL - This is a critical message.
+2025-01-30 00:19:06,595 - INFO - unsupported operand type(s) for +: 'int' and 'str'
+2025-01-30 00:19:06,596 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\demo.py] at line number [18]: unsupported operand type(s) for +: 'int' and 'str'
