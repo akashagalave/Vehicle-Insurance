@@ -106,3 +106,81 @@
 2025-01-30 23:58:55,653 - INFO - Uploaded artifacts folder to s3 bucket
 2025-01-30 23:58:55,653 - INFO - Model pusher artifact: [ModelPusherArtifact(bucket_name='vehicleinsurance', s3_model_path='model.pkl')]
 2025-01-30 23:58:55,653 - INFO - Exited initiate_model_pusher method of ModelTrainer class
+2025-01-31 00:31:44,007 - INFO - This is an info log.
+2025-01-31 00:31:44,008 - ERROR - This is an error log.
+2025-01-31 00:34:25,536 - INFO - This is an info log.
+2025-01-31 00:34:25,536 - ERROR - This is an error log.
+2025-01-31 00:35:42,316 - INFO - Entered get_usvisa_data_as_dict method as VehicleData class
+2025-01-31 00:35:42,316 - INFO - Created vehicle data dict
+2025-01-31 00:35:42,316 - INFO - Exited get_vehicle_data_as_dict method as VehicleData class
+2025-01-31 00:35:42,324 - INFO - Entered predict method of VehicleDataClassifier class
+2025-01-31 00:35:43,431 - INFO - Entered the get_file_object method of SimpleStorageService class
+2025-01-31 00:35:43,433 - INFO - Entered the get_bucket method of SimpleStorageService class
+2025-01-31 00:35:43,435 - INFO - Exited the get_bucket method of SimpleStorageService class
+2025-01-31 00:35:45,285 - INFO - Exited the get_file_object method of SimpleStorageService class
+2025-01-31 00:35:45,381 - INFO - Skipping checksum validation. Response did not contain one of the following algorithms: ['crc32', 'sha1', 'sha256'].
+2025-01-31 00:35:45,386 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [70]: An error occurred (AccessDenied) when calling the GetObject operation: User: arn:aws:iam::868402157267:user/AllowVehicle is not authorized to perform: s3:GetObject on resource: "arn:aws:s3:::vehicleinsurance/model.pkl" because no identity-based policy allows the s3:GetObject action
+2025-01-31 00:35:45,394 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [129]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [70]: An error occurred (AccessDenied) when calling the GetObject operation: User: arn:aws:iam::868402157267:user/AllowVehicle is not authorized to perform: s3:GetObject on resource: "arn:aws:s3:::vehicleinsurance/model.pkl" because no identity-based policy allows the s3:GetObject action
+2025-01-31 00:35:45,396 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\entity\s3_estimator.py] at line number [63]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [129]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [70]: An error occurred (AccessDenied) when calling the GetObject operation: User: arn:aws:iam::868402157267:user/AllowVehicle is not authorized to perform: s3:GetObject on resource: "arn:aws:s3:::vehicleinsurance/model.pkl" because no identity-based policy allows the s3:GetObject action
+2025-01-31 00:35:45,399 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\pipline\prediction_pipeline.py] at line number [105]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\entity\s3_estimator.py] at line number [63]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [129]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [70]: An error occurred (AccessDenied) when calling the GetObject operation: User: arn:aws:iam::868402157267:user/AllowVehicle is not authorized to perform: s3:GetObject on resource: "arn:aws:s3:::vehicleinsurance/model.pkl" because no identity-based policy allows the s3:GetObject action
+2025-01-31 00:40:18,685 - INFO - Entered get_usvisa_data_as_dict method as VehicleData class
+2025-01-31 00:40:18,685 - INFO - Created vehicle data dict
+2025-01-31 00:40:18,685 - INFO - Exited get_vehicle_data_as_dict method as VehicleData class
+2025-01-31 00:40:18,685 - INFO - Entered predict method of VehicleDataClassifier class
+2025-01-31 00:40:18,685 - INFO - Entered the get_file_object method of SimpleStorageService class
+2025-01-31 00:40:18,685 - INFO - Entered the get_bucket method of SimpleStorageService class
+2025-01-31 00:40:18,685 - INFO - Exited the get_bucket method of SimpleStorageService class
+2025-01-31 00:40:20,020 - INFO - Exited the get_file_object method of SimpleStorageService class
+2025-01-31 00:40:20,119 - INFO - Skipping checksum validation. Response did not contain one of the following algorithms: ['crc32', 'sha1', 'sha256'].
+2025-01-31 00:40:20,119 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [70]: An error occurred (AccessDenied) when calling the GetObject operation: User: arn:aws:iam::868402157267:user/AllowVehicle is not authorized to perform: s3:GetObject on resource: "arn:aws:s3:::vehicleinsurance/model.pkl" because no identity-based policy allows the s3:GetObject action
+2025-01-31 00:40:20,130 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [129]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [70]: An error occurred (AccessDenied) when calling the GetObject operation: User: arn:aws:iam::868402157267:user/AllowVehicle is not authorized to perform: s3:GetObject on resource: "arn:aws:s3:::vehicleinsurance/model.pkl" because no identity-based policy allows the s3:GetObject action
+2025-01-31 00:40:20,134 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\entity\s3_estimator.py] at line number [63]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [129]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [70]: An error occurred (AccessDenied) when calling the GetObject operation: User: arn:aws:iam::868402157267:user/AllowVehicle is not authorized to perform: s3:GetObject on resource: "arn:aws:s3:::vehicleinsurance/model.pkl" because no identity-based policy allows the s3:GetObject action
+2025-01-31 00:40:20,137 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\pipline\prediction_pipeline.py] at line number [105]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\entity\s3_estimator.py] at line number [63]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [129]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\cloud_storage\aws_storage.py] at line number [70]: An error occurred (AccessDenied) when calling the GetObject operation: User: arn:aws:iam::868402157267:user/AllowVehicle is not authorized to perform: s3:GetObject on resource: "arn:aws:s3:::vehicleinsurance/model.pkl" because no identity-based policy allows the s3:GetObject action
+2025-01-31 00:43:45,021 - INFO - This is an info log.
+2025-01-31 00:43:45,021 - ERROR - This is an error log.
+2025-01-31 00:44:28,971 - INFO - Entered get_usvisa_data_as_dict method as VehicleData class
+2025-01-31 00:44:28,971 - INFO - Created vehicle data dict
+2025-01-31 00:44:28,971 - INFO - Exited get_vehicle_data_as_dict method as VehicleData class
+2025-01-31 00:44:29,002 - INFO - Entered predict method of VehicleDataClassifier class
+2025-01-31 00:44:29,823 - INFO - Entered the get_file_object method of SimpleStorageService class
+2025-01-31 00:44:29,823 - INFO - Entered the get_bucket method of SimpleStorageService class
+2025-01-31 00:44:29,823 - INFO - Exited the get_bucket method of SimpleStorageService class
+2025-01-31 00:44:31,814 - INFO - Exited the get_file_object method of SimpleStorageService class
+2025-01-31 00:44:32,136 - INFO - Skipping checksum validation. Response did not contain one of the following algorithms: ['crc32', 'sha1', 'sha256'].
+2025-01-31 00:44:34,312 - INFO - Production model loaded from S3 bucket.
+2025-01-31 00:44:34,312 - INFO - Starting prediction process.
+2025-01-31 00:44:34,358 - INFO - Using the trained model to get predictions
+2025-01-31 00:46:22,593 - INFO - Entered get_usvisa_data_as_dict method as VehicleData class
+2025-01-31 00:46:22,593 - INFO - Created vehicle data dict
+2025-01-31 00:46:22,593 - INFO - Exited get_vehicle_data_as_dict method as VehicleData class
+2025-01-31 00:46:22,600 - INFO - Entered predict method of VehicleDataClassifier class
+2025-01-31 00:46:22,600 - INFO - Entered the get_file_object method of SimpleStorageService class
+2025-01-31 00:46:22,600 - INFO - Entered the get_bucket method of SimpleStorageService class
+2025-01-31 00:46:22,605 - INFO - Exited the get_bucket method of SimpleStorageService class
+2025-01-31 00:46:23,943 - INFO - Exited the get_file_object method of SimpleStorageService class
+2025-01-31 00:46:24,073 - INFO - Skipping checksum validation. Response did not contain one of the following algorithms: ['crc32', 'sha1', 'sha256'].
+2025-01-31 00:46:25,912 - INFO - Production model loaded from S3 bucket.
+2025-01-31 00:46:25,917 - INFO - Starting prediction process.
+2025-01-31 00:46:25,933 - INFO - Using the trained model to get predictions
+2025-01-31 00:50:13,183 - INFO - This is an info log.
+2025-01-31 00:50:13,183 - ERROR - This is an error log.
+2025-01-31 00:53:01,550 - INFO - This is an info log.
+2025-01-31 00:53:01,550 - ERROR - This is an error log.
+2025-01-31 01:03:18,692 - INFO - This is an info log.
+2025-01-31 01:03:18,692 - ERROR - This is an error log.
+2025-01-31 01:05:49,724 - INFO - This is an info log.
+2025-01-31 01:05:49,724 - ERROR - This is an error log.
+2025-01-31 01:09:04,699 - INFO - Entered get_usvisa_data_as_dict method as VehicleData class
+2025-01-31 01:09:04,699 - INFO - Created vehicle data dict
+2025-01-31 01:09:04,699 - INFO - Exited get_vehicle_data_as_dict method as VehicleData class
+2025-01-31 01:09:04,731 - INFO - Entered predict method of VehicleDataClassifier class
+2025-01-31 01:09:05,626 - INFO - Entered the get_file_object method of SimpleStorageService class
+2025-01-31 01:09:05,626 - INFO - Entered the get_bucket method of SimpleStorageService class
+2025-01-31 01:09:05,626 - INFO - Exited the get_bucket method of SimpleStorageService class
+2025-01-31 01:09:07,672 - INFO - Exited the get_file_object method of SimpleStorageService class
+2025-01-31 01:09:07,841 - INFO - Skipping checksum validation. Response did not contain one of the following algorithms: ['crc32', 'sha1', 'sha256'].
+2025-01-31 01:09:09,896 - INFO - Production model loaded from S3 bucket.
+2025-01-31 01:09:09,896 - INFO - Starting prediction process.
+2025-01-31 01:09:09,975 - INFO - Using the trained model to get predictions
+2025-01-31 01:11:01,147 - INFO - This is an info log.
+2025-01-31 01:11:01,147 - ERROR - This is an error log.
