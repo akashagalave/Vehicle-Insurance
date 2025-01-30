@@ -1,76 +1,108 @@
-2025-01-30 18:41:19,214 - INFO - This is an info log.
-2025-01-30 18:41:19,214 - ERROR - This is an error log.
-2025-01-30 18:46:18,708 - INFO - This is an info log.
-2025-01-30 18:46:18,708 - ERROR - This is an error log.
-2025-01-30 18:46:23,497 - INFO - Entered the start_data_ingestion method of TrainPipeline class
-2025-01-30 18:46:23,498 - INFO - Getting the data from mongodb
-2025-01-30 18:46:23,498 - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
-2025-01-30 18:46:23,498 - INFO - Exporting data from mongodb
-2025-01-30 18:46:24,471 - INFO - MongoDB connection successful.
-2025-01-30 18:46:59,380 - INFO - Shape of dataframe: (381109, 12)
-2025-01-30 18:46:59,410 - INFO - Saving exported data into feature store file path: artifact\01_30_2025_18_46_22\data_ingestion\feature_store\data.csv
-2025-01-30 18:47:01,493 - INFO - Got the data from mongodb
-2025-01-30 18:47:01,494 - INFO - Entered split_data_as_train_test method of Data_Ingestion class
-2025-01-30 18:47:01,658 - INFO - Performed train test split on the dataframe
-2025-01-30 18:47:01,658 - INFO - Exited split_data_as_train_test method of Data_Ingestion class
-2025-01-30 18:47:01,661 - INFO - Exporting train and test file path.
-2025-01-30 18:47:04,327 - INFO - Exported train and test file path.
-2025-01-30 18:47:04,368 - INFO - Performed train test split on the dataset
-2025-01-30 18:47:04,368 - INFO - Exited initiate_data_ingestion method of Data_Ingestion class
-2025-01-30 18:47:04,368 - INFO - Data ingestion artifact: DataIngestionArtifact(trained_file_path='artifact\\01_30_2025_18_46_22\\data_ingestion\\ingested\\train.csv', test_file_path='artifact\\01_30_2025_18_46_22\\data_ingestion\\ingested\\test.csv')
-2025-01-30 18:47:04,485 - INFO - Got the train_set and test_set from mongodb
-2025-01-30 18:47:04,486 - INFO - Exited the start_data_ingestion method of TrainPipeline class
-2025-01-30 18:47:04,486 - INFO - Entered the start_data_validation method of TrainPipeline class
-2025-01-30 18:47:04,512 - INFO - Starting data validation
-2025-01-30 18:47:05,142 - INFO - Is required column present: [True]
-2025-01-30 18:47:05,144 - INFO - All required columns present in training dataframe: True
-2025-01-30 18:47:05,147 - INFO - Is required column present: [True]
-2025-01-30 18:47:05,147 - INFO - All required columns present in testing dataframe: True
-2025-01-30 18:47:05,148 - INFO - All categorical/int columns present in training dataframe: True
-2025-01-30 18:47:05,148 - INFO - All categorical/int columns present in testing dataframe: True
-2025-01-30 18:47:05,150 - INFO - Data validation artifact created and saved to JSON file.
-2025-01-30 18:47:05,150 - INFO - Data validation artifact: DataValidationArtifact(validation_status=True, message='', validation_report_file_path='artifact\\01_30_2025_18_46_22\\data_validation\\report.yaml')
-2025-01-30 18:47:05,166 - INFO - Performed the data validation operation
-2025-01-30 18:47:05,168 - INFO - Exited the start_data_validation method of TrainPipeline class
-2025-01-30 18:47:05,170 - INFO - Data Transformation Started !!!
-2025-01-30 18:47:05,762 - INFO - Train-Test data loaded
-2025-01-30 18:47:05,788 - INFO - Input and Target cols defined for both train and test df.
-2025-01-30 18:47:05,788 - INFO - Mapping 'Gender' column to binary values
-2025-01-30 18:47:05,806 - INFO - Dropping 'id' column
-2025-01-30 18:47:05,829 - INFO - Creating dummy variables for categorical features
-2025-01-30 18:47:05,898 - INFO - Renaming specific columns and casting to int
-2025-01-30 18:47:05,916 - INFO - Mapping 'Gender' column to binary values
-2025-01-30 18:47:05,919 - INFO - Dropping 'id' column
-2025-01-30 18:47:05,931 - INFO - Creating dummy variables for categorical features
-2025-01-30 18:47:05,958 - INFO - Renaming specific columns and casting to int
-2025-01-30 18:47:05,967 - INFO - Custom transformations applied to train and test data
-2025-01-30 18:47:05,969 - INFO - Starting data transformation
-2025-01-30 18:47:05,970 - INFO - Entered get_data_transformer_object method of DataTransformation class
-2025-01-30 18:47:05,970 - INFO - Transformers Initialized: StandardScaler-MinMaxScaler
-2025-01-30 18:47:05,970 - INFO - Cols loaded from schema.
-2025-01-30 18:47:05,970 - INFO - Final Pipeline Ready!!
-2025-01-30 18:47:05,970 - INFO - Exited get_data_transformer_object method of DataTransformation class
-2025-01-30 18:47:05,974 - INFO - Got the preprocessor object
-2025-01-30 18:47:05,974 - INFO - Initializing transformation for Training-data
-2025-01-30 18:47:06,050 - INFO - Initializing transformation for Testing-data
-2025-01-30 18:47:06,081 - INFO - Transformation done end to end to train-test df.
-2025-01-30 18:47:06,081 - INFO - Applying SMOTEENN for handling imbalanced dataset.
-2025-01-30 18:47:57,241 - INFO - SMOTEENN applied to train-test df.
-2025-01-30 18:47:57,261 - INFO - feature-target concatenation done for train-test df.
-2025-01-30 18:47:57,266 - INFO - Entered the save_object method of utils
-2025-01-30 18:47:57,296 - INFO - Exited the save_object method of utils
-2025-01-30 18:47:57,367 - INFO - Saving transformation object and transformed files.
-2025-01-30 18:47:57,368 - INFO - Data transformation completed successfully
-2025-01-30 18:47:57,392 - INFO - Entered initiate_model_trainer method of ModelTrainer class
-2025-01-30 18:47:57,477 - INFO - train-test data loaded
-2025-01-30 18:47:57,479 - INFO - Training RandomForestClassifier with specified parameters
-2025-01-30 18:47:57,479 - INFO - train-test split done.
-2025-01-30 18:47:57,480 - INFO - Model training going on...
-2025-01-30 18:49:22,068 - INFO - Model training done.
-2025-01-30 18:49:25,338 - INFO - Model object and artifact loaded.
-2025-01-30 18:49:25,348 - INFO - Preprocessing obj loaded.
-2025-01-30 18:49:34,598 - INFO - Saving new model as performace is better than previous one.
-2025-01-30 18:49:34,598 - INFO - Entered the save_object method of utils
-2025-01-30 18:49:35,028 - INFO - Exited the save_object method of utils
-2025-01-30 18:49:35,028 - INFO - Saved final model object that includes both preprocessing and the trained model
-2025-01-30 18:49:35,028 - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='artifact\\01_30_2025_18_46_22\\model_trainer\\trained_model\\model.pkl', metric_artifact=ClassificationMetricArtifact(f1_score=0.932048732509638, precision_score=0.8826416838899163, recall_score=0.9873150105708245))
+2025-01-30 23:50:47,417 - INFO - This is an info log.
+2025-01-30 23:50:47,417 - ERROR - This is an error log.
+2025-01-30 23:50:54,298 - INFO - Entered the start_data_ingestion method of TrainPipeline class
+2025-01-30 23:50:54,298 - INFO - Getting the data from mongodb
+2025-01-30 23:50:54,298 - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+2025-01-30 23:50:54,298 - INFO - Exporting data from mongodb
+2025-01-30 23:50:54,298 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\configuration\mongo_db_connection.py] at line number [51]: Environment variable 'MONGODB_URL' is not set.
+2025-01-30 23:50:54,298 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\data_access\proj1_data.py] at line number [20]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\configuration\mongo_db_connection.py] at line number [51]: Environment variable 'MONGODB_URL' is not set.
+2025-01-30 23:50:54,298 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\components\data_ingestion.py] at line number [34]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\data_access\proj1_data.py] at line number [20]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\configuration\mongo_db_connection.py] at line number [51]: Environment variable 'MONGODB_URL' is not set.
+2025-01-30 23:50:54,298 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\components\data_ingestion.py] at line number [86]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\components\data_ingestion.py] at line number [34]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\data_access\proj1_data.py] at line number [20]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\configuration\mongo_db_connection.py] at line number [51]: Environment variable 'MONGODB_URL' is not set.
+2025-01-30 23:50:54,303 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\pipline\training_pipeline.py] at line number [50]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\components\data_ingestion.py] at line number [86]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\components\data_ingestion.py] at line number [34]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\data_access\proj1_data.py] at line number [20]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\configuration\mongo_db_connection.py] at line number [51]: Environment variable 'MONGODB_URL' is not set.
+2025-01-30 23:50:54,306 - ERROR - Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\pipline\training_pipeline.py] at line number [136]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\pipline\training_pipeline.py] at line number [50]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\components\data_ingestion.py] at line number [86]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\components\data_ingestion.py] at line number [34]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\data_access\proj1_data.py] at line number [20]: Error occurred in python script: [C:\End-To-End Projects\Vehicle-Insurance\src\configuration\mongo_db_connection.py] at line number [51]: Environment variable 'MONGODB_URL' is not set.
+2025-01-30 23:53:31,863 - INFO - This is an info log.
+2025-01-30 23:53:31,863 - ERROR - This is an error log.
+2025-01-30 23:53:35,610 - INFO - Entered the start_data_ingestion method of TrainPipeline class
+2025-01-30 23:53:35,610 - INFO - Getting the data from mongodb
+2025-01-30 23:53:35,610 - INFO - Entered initiate_data_ingestion method of Data_Ingestion class
+2025-01-30 23:53:35,610 - INFO - Exporting data from mongodb
+2025-01-30 23:53:36,469 - INFO - MongoDB connection successful.
+2025-01-30 23:54:15,369 - INFO - Shape of dataframe: (381109, 12)
+2025-01-30 23:54:15,395 - INFO - Saving exported data into feature store file path: artifact\01_30_2025_23_53_34\data_ingestion\feature_store\data.csv
+2025-01-30 23:54:17,348 - INFO - Got the data from mongodb
+2025-01-30 23:54:17,353 - INFO - Entered split_data_as_train_test method of Data_Ingestion class
+2025-01-30 23:54:17,530 - INFO - Performed train test split on the dataframe
+2025-01-30 23:54:17,530 - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+2025-01-30 23:54:17,530 - INFO - Exporting train and test file path.
+2025-01-30 23:54:20,194 - INFO - Exported train and test file path.
+2025-01-30 23:54:20,242 - INFO - Performed train test split on the dataset
+2025-01-30 23:54:20,242 - INFO - Exited initiate_data_ingestion method of Data_Ingestion class
+2025-01-30 23:54:20,242 - INFO - Data ingestion artifact: DataIngestionArtifact(trained_file_path='artifact\\01_30_2025_23_53_34\\data_ingestion\\ingested\\train.csv', test_file_path='artifact\\01_30_2025_23_53_34\\data_ingestion\\ingested\\test.csv')
+2025-01-30 23:54:20,348 - INFO - Got the train_set and test_set from mongodb
+2025-01-30 23:54:20,348 - INFO - Exited the start_data_ingestion method of TrainPipeline class
+2025-01-30 23:54:20,348 - INFO - Entered the start_data_validation method of TrainPipeline class
+2025-01-30 23:54:20,367 - INFO - Starting data validation
+2025-01-30 23:54:20,839 - INFO - Is required column present: [True]
+2025-01-30 23:54:20,839 - INFO - All required columns present in training dataframe: True
+2025-01-30 23:54:20,839 - INFO - Is required column present: [True]
+2025-01-30 23:54:20,839 - INFO - All required columns present in testing dataframe: True
+2025-01-30 23:54:20,845 - INFO - All categorical/int columns present in training dataframe: True
+2025-01-30 23:54:20,845 - INFO - All categorical/int columns present in testing dataframe: True
+2025-01-30 23:54:20,848 - INFO - Data validation artifact created and saved to JSON file.
+2025-01-30 23:54:20,848 - INFO - Data validation artifact: DataValidationArtifact(validation_status=True, message='', validation_report_file_path='artifact\\01_30_2025_23_53_34\\data_validation\\report.yaml')
+2025-01-30 23:54:20,860 - INFO - Performed the data validation operation
+2025-01-30 23:54:20,860 - INFO - Exited the start_data_validation method of TrainPipeline class
+2025-01-30 23:54:20,865 - INFO - Data Transformation Started !!!
+2025-01-30 23:54:21,382 - INFO - Train-Test data loaded
+2025-01-30 23:54:21,400 - INFO - Input and Target cols defined for both train and test df.
+2025-01-30 23:54:21,400 - INFO - Mapping 'Gender' column to binary values
+2025-01-30 23:54:21,422 - INFO - Dropping 'id' column
+2025-01-30 23:54:21,453 - INFO - Creating dummy variables for categorical features
+2025-01-30 23:54:21,550 - INFO - Renaming specific columns and casting to int
+2025-01-30 23:54:21,550 - INFO - Mapping 'Gender' column to binary values
+2025-01-30 23:54:21,565 - INFO - Dropping 'id' column
+2025-01-30 23:54:21,573 - INFO - Creating dummy variables for categorical features
+2025-01-30 23:54:21,590 - INFO - Renaming specific columns and casting to int
+2025-01-30 23:54:21,599 - INFO - Custom transformations applied to train and test data
+2025-01-30 23:54:21,601 - INFO - Starting data transformation
+2025-01-30 23:54:21,601 - INFO - Entered get_data_transformer_object method of DataTransformation class
+2025-01-30 23:54:21,601 - INFO - Transformers Initialized: StandardScaler-MinMaxScaler
+2025-01-30 23:54:21,604 - INFO - Cols loaded from schema.
+2025-01-30 23:54:21,604 - INFO - Final Pipeline Ready!!
+2025-01-30 23:54:21,604 - INFO - Exited get_data_transformer_object method of DataTransformation class
+2025-01-30 23:54:21,606 - INFO - Got the preprocessor object
+2025-01-30 23:54:21,606 - INFO - Initializing transformation for Training-data
+2025-01-30 23:54:21,661 - INFO - Initializing transformation for Testing-data
+2025-01-30 23:54:21,661 - INFO - Transformation done end to end to train-test df.
+2025-01-30 23:54:21,661 - INFO - Applying SMOTEENN for handling imbalanced dataset.
+2025-01-30 23:55:49,001 - INFO - SMOTEENN applied to train-test df.
+2025-01-30 23:55:49,064 - INFO - feature-target concatenation done for train-test df.
+2025-01-30 23:55:49,069 - INFO - Entered the save_object method of utils
+2025-01-30 23:55:49,082 - INFO - Exited the save_object method of utils
+2025-01-30 23:55:49,179 - INFO - Saving transformation object and transformed files.
+2025-01-30 23:55:49,181 - INFO - Data transformation completed successfully
+2025-01-30 23:55:49,232 - INFO - Entered initiate_model_trainer method of ModelTrainer class
+2025-01-30 23:55:49,343 - INFO - train-test data loaded
+2025-01-30 23:55:49,343 - INFO - Training RandomForestClassifier with specified parameters
+2025-01-30 23:55:49,343 - INFO - train-test split done.
+2025-01-30 23:55:49,347 - INFO - Model training going on...
+2025-01-30 23:58:36,139 - INFO - Model training done.
+2025-01-30 23:58:39,201 - INFO - Model object and artifact loaded.
+2025-01-30 23:58:39,211 - INFO - Preprocessing obj loaded.
+2025-01-30 23:58:47,979 - INFO - Saving new model as performace is better than previous one.
+2025-01-30 23:58:48,002 - INFO - Entered the save_object method of utils
+2025-01-30 23:58:48,439 - INFO - Exited the save_object method of utils
+2025-01-30 23:58:48,439 - INFO - Saved final model object that includes both preprocessing and the trained model
+2025-01-30 23:58:48,439 - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='artifact\\01_30_2025_23_53_34\\model_trainer\\trained_model\\model.pkl', metric_artifact=ClassificationMetricArtifact(f1_score=0.9309384373660906, precision_score=0.881195749168492, recall_score=0.986632958914893))
+2025-01-30 23:58:48,454 - INFO - Initialized Model Evaluation Component.
+2025-01-30 23:58:48,853 - INFO - Test data loaded and now transforming it for prediction...
+2025-01-30 23:58:48,853 - INFO - Mapping 'Gender' column to binary values
+2025-01-30 23:58:48,869 - INFO - Dropping 'id' column
+2025-01-30 23:58:48,882 - INFO - Creating dummy variables for categorical features
+2025-01-30 23:58:48,941 - INFO - Renaming specific columns and casting to int
+2025-01-30 23:58:49,028 - INFO - Trained model loaded/exists.
+2025-01-30 23:58:49,029 - INFO - F1_Score for this model: 0.9309384373660906
+2025-01-30 23:58:50,431 - INFO - Entered the get_bucket method of SimpleStorageService class
+2025-01-30 23:58:50,438 - INFO - Exited the get_bucket method of SimpleStorageService class
+2025-01-30 23:58:52,104 - INFO - Result: EvaluateModelResponse(trained_model_f1_score=0.9309384373660906, best_model_f1_score=None, is_model_accepted=True, difference=0.9309384373660906)
+2025-01-30 23:58:52,118 - INFO - Model evaluation artifact: ModelEvaluationArtifact(is_model_accepted=True, changed_accuracy=0.9309384373660906, s3_model_path='model.pkl', trained_model_path='artifact\\01_30_2025_23_53_34\\model_trainer\\trained_model\\model.pkl')
+2025-01-30 23:58:52,119 - INFO - Entered initiate_model_pusher method of ModelTrainer class
+2025-01-30 23:58:52,120 - INFO - Uploading artifacts folder to s3 bucket
+2025-01-30 23:58:52,121 - INFO - Uploading new model to S3 bucket....
+2025-01-30 23:58:52,121 - INFO - Entered the upload_file method of SimpleStorageService class
+2025-01-30 23:58:52,121 - INFO - Uploading artifact\01_30_2025_23_53_34\model_trainer\trained_model\model.pkl to model.pkl in vehicleinsurance
+2025-01-30 23:58:55,649 - INFO - Uploaded artifact\01_30_2025_23_53_34\model_trainer\trained_model\model.pkl to model.pkl in vehicleinsurance
+2025-01-30 23:58:55,649 - INFO - Exited the upload_file method of SimpleStorageService class
+2025-01-30 23:58:55,653 - INFO - Uploaded artifacts folder to s3 bucket
+2025-01-30 23:58:55,653 - INFO - Model pusher artifact: [ModelPusherArtifact(bucket_name='vehicleinsurance', s3_model_path='model.pkl')]
+2025-01-30 23:58:55,653 - INFO - Exited initiate_model_pusher method of ModelTrainer class
